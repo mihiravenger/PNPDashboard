@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PNPDashboard.Server", "PNPDashboard\Server\PNPDashboard.Server.csproj", "{8A249C2D-5526-4143-BF83-F7AAE4763314}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PNPDashboard.Server", "PNPDashboard\Server\PNPDashboard.Server.csproj", "{8A249C2D-5526-4143-BF83-F7AAE4763314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PNPDashboard.Client", "PNPDashboard\Client\PNPDashboard.Client.csproj", "{46DEC99E-5D6C-40A9-8C8C-685D1A9B0562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PNPDashboard.Client", "PNPDashboard\Client\PNPDashboard.Client.csproj", "{46DEC99E-5D6C-40A9-8C8C-685D1A9B0562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PNPDashboard.Shared", "PNPDashboard\Shared\PNPDashboard.Shared.csproj", "{8E107473-8BC5-4F93-8C1A-29F749238485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PNPDashboard.Shared", "PNPDashboard\Shared\PNPDashboard.Shared.csproj", "{8E107473-8BC5-4F93-8C1A-29F749238485}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
