@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using PNPDashboard.Server.Models;
+using PNPDashboard.Shared.Models;
 
 #nullable disable
 
