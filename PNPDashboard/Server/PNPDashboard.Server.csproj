@@ -19,5 +19,9 @@
     <ProjectReference Include="..\Shared\PNPDashboard.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 
 </Project>
