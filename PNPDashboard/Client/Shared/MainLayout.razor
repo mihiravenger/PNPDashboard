@@ -1,5 +1,6 @@
 ﻿@inherits LayoutComponentBase
-
+@*@inject Microsoft.Extensions.Localization.IStringLocalizer<MainLayout> localizer*@
+<MudThemeProvider Theme="MyCustomTheme" />
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -7,15 +8,32 @@
 
     <div class="main">
         @*<div class="top-row px-4">
-                <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-            </div>
+                    <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+                </div>
 
-        <div class="content px-4">
-                @Body
-            </div>*@
+            <div class="content px-4">
+                    @Body
+                </div>*@
     </div>
 </div>
+@code{
+    MudTheme MyCustomTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Primary = Colors.Blue.Default,
+            Secondary = Colors.Green.Accent4,
+            AppbarBackground = Colors.Red.Default,
+        },
 
-<MudBlazor.BaseMudThemeProvider/>
-<MudBlazor.MudDialogProvider/>
-<MudBlazor.MudSnackbarProvider/>
+        LayoutProperties = new LayoutProperties()
+        {
+            DrawerWidthLeft = "260px",
+            DrawerWidthRight = "300px"
+        }
+    };
+}
+
+<MudBlazor.BaseMudThemeProvider />
+<MudBlazor.MudDialogProvider />
+<MudBlazor.MudSnackbarProvider />
