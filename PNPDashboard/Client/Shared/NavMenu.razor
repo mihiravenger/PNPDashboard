@@ -1,29 +1,90 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">PNPDashboard</a>
+    <a class="navbar-brand" href="">PNPDashboard Spain</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+@using MudBlazor
+
+<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">
+
+        <img src="~/Images/TempurSealyLogo.png" / alt="logo">
+    </a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li>
-    </ul>
-</div>
+@*<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">*@
+    @*<ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Home
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="counter">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Set Up
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="fetchdata">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> User Configrations
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="fetchdata">
+                    <span class="oi oi-list-rich" aria-hidden="true"></span> User Configrations
+                </NavLink>
+            </li>
+        </ul>*@
+
+    <MudPaper Width="250px" Class="py-3" Square="true">
+        <MudNavMenu>
+            @*<MudText Typo="Typo.h6" Class="px-4">My Application</MudText>
+        <MudText Typo="Typo.body2" Class="px-4 mud-text-secondary">Secondary Text</MudText>*@
+            <MudDivider Class="my-2" />
+            <MudNavLink Href="">Home</MudNavLink>
+            <MudNavGroup Title="SetUp" Expanded="false">
+                <MudNavGroup Title="Country Configrations" Expanded="false">
+                    <MudNavLink Href="">Default Users</MudNavLink>
+                    <MudNavLink Href="">Source Definition</MudNavLink>
+                    <MudNavLink Href="">Financial Deminsion List</MudNavLink>
+                    <MudNavLink Href="">AX Attribute List</MudNavLink>
+                </MudNavGroup>
+                <MudNavLink Href="">Financial Dimensions Group</MudNavLink>
+                <MudNavLink Href="">AX Configration Group</MudNavLink>
+                <MudNavLink Href="">Source Mapping</MudNavLink>
+                <MudNavLink Href="">Affilate Mapping</MudNavLink>
+                <MudNavLink Href="">Payments Method Mapping</MudNavLink>
+                <MudNavLink Href="">State Mapping</MudNavLink>
+                <MudNavLink Href="">Shippment Method Mapping</MudNavLink>
+                <MudNavLink Href="">Notes Configration</MudNavLink>
+                <MudNavLink Href="">Tax Method Maping</MudNavLink>
+                <MudNavLink Href="">AX State</MudNavLink>
+                <MudNavLink Href="">AX City</MudNavLink>
+            </MudNavGroup>
+            <MudNavGroup Title="User Configrations" Expanded="false">
+                <MudNavLink Href="">User Management</MudNavLink>
+                <MudNavLink Href="">Role</MudNavLink>
+                <MudNavLink Href="">Role Menu Mapping</MudNavLink>
+            </MudNavGroup>
+
+            <MudNavGroup Title="Monitoring" Expanded="false">
+                <MudNavLink Href="">Run Log</MudNavLink>
+                <MudNavLink Href="">File Log</MudNavLink>
+                <MudNavLink Href="">Order Log</MudNavLink>
+                <MudNavLink Href="">Sales Order</MudNavLink>
+                <MudNavLink Href="">Run Log Update</MudNavLink>
+            </MudNavGroup>
+            <MudNavGroup Title="Report" Expanded="false">
+                <MudNavLink Href="">Order Variations</MudNavLink>
+            </MudNavGroup>
+
+        </MudNavMenu>
+    </MudPaper>
+@*</div>*@
 
 @code {
     private bool collapseNavMenu = true;
