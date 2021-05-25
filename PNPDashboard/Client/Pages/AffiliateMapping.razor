@@ -7,12 +7,73 @@
 @inject HttpClient httpClient
 @inject HttpClient Http;
 
+<h3>AffiliateMapping</h3>
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                Earnings
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>DWAffiliateID</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if ( AffiliateMappings == null)
+                        {
+                            <tr><td><em>Loading...</em></td></tr>
+                        }
+                        else
+                        {
+                            @foreach (var AffiliateMapping in AffiliateMappings)
+                            {
+                                <tr>
+                                    <td>@AffiliateMapping.</td>
+                                    <td>@AffiliateMapping.</td>
+                                    <td>@AffiliateMapping.</td>
+                                    <td>@AffiliateMapping.</td>
+                                   
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    @*<div class="col-lg-4">
+        <EarningForm OnSubmitCallback="@Refresh"></EarningForm>
+    </div>*@
+</div>
+<div>&nbsp;</div>
 
 
-    <h3>AffiliateMapping</h3>
 
 
+@code {
+    private AffiliateMapping[] AffiliateMappings;
 
-    @code {
-
+    protected async override Task OnInitializedAsync()
+    {
+        await LoadData();
     }
+
+    private async Task LoadData()
+    {
+        AffiliateMappings = await Http.GetFromJsonAsync<AffiliateMapping[]>("api/AffiliateMappings");
+        StateHasChanged();
+    }
+
+    public async void Refresh()
+    {
+        await LoadData();
+    }
+
+}
