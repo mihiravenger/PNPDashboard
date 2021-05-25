@@ -1,20 +1,43 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
+﻿@*<div class="top-row pl-4 navbar order-sm-1">
     <a class="navbar-brand" href="">PNPDashboard Spain</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
-</div>
+</div>*@
 @using MudBlazor
 
-<div class="top-row pl-4 navbar navbar-dark">
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-1 col-md-3 mr-4" href="">Spain Dashboard</a>
+    <ul class="navbar-nav px-lg-3">
+        <li class="nav-item text-nowrap">
+            <button class="nav-link btn btn-link" @onclick="ToggleNavMenu">
+               
+            </button>
+        </li>
+    </ul>
+
+@*<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">Spain Dashboard</a>*@
+
+    @*<li class="nav-item text-nowrap">
+            <button class="nav-link btn btn-link" @onclick="ToggleNavMenu">
+            </button>
+        </li>*@
+   <img src="~/Images/TempurSealyLogo.png" alt="logo">
+   
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+    </button>
+
+</nav>
+@*<div>
     <a class="navbar-brand" href="">
 
         <img src="~/Images/TempurSealyLogo.png"  alt="logo">
     </a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
+        
     </button>
-</div>
+</div>*@
 
 @*<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">*@
     @*<ul class="nav flex-column">
@@ -39,60 +62,60 @@
                 </NavLink>
             </li>
         </ul>*@
-
-    <MudPaper Width="250px" Class="py-3" Square="true">
-        <MudNavMenu>
-            @*<MudText Typo="Typo.h6" Class="px-4">My Application</MudText>
-        <MudText Typo="Typo.body2" Class="px-4 mud-text-secondary">Secondary Text</MudText>*@
-            <MudDivider Class="my-2" />
-            <MudNavLink Href="Index">Home</MudNavLink>
-            <MudNavGroup Title="SetUp" Expanded="false">
-                <MudNavGroup Title="Country Configrations" Expanded="false">
-                    <MudNavLink Href="">Default Users</MudNavLink>
-                    <MudNavLink Href="">Source Definition</MudNavLink>
-                    <MudNavLink Href="">Financial Deminsion List</MudNavLink>
-                    <MudNavLink Href="">AX Attribute List</MudNavLink>
+<div>
+    
+        <MudPaper Width="250px" Class="py-5" Square="true">
+            <MudNavMenu>          
+                <MudDivider Class="my-2" />
+                <MudNavLink Href="Index">Home</MudNavLink>
+                <MudNavGroup Title="SetUp" Expanded="false">
+                    <MudNavGroup Title="Country Configrations" Expanded="false">
+                        <MudNavLink Href="">Default Users</MudNavLink>
+                        <MudNavLink Href="">Source Definition</MudNavLink>
+                        <MudNavLink Href="">Financial Deminsion List</MudNavLink>
+                        <MudNavLink Href="">AX Attribute List</MudNavLink>
+                    </MudNavGroup>
+                    <MudNavLink Href="">Financial Dimensions Group</MudNavLink>
+                    <MudNavLink Href="">AX Configration Group</MudNavLink>
+                    <MudNavLink Href="">Source Mapping</MudNavLink>
+                    <MudNavLink Href="">Affilate Mapping</MudNavLink>
+                    <MudNavLink Href="">Payments Method Mapping</MudNavLink>
+                    <MudNavLink Href="">State Mapping</MudNavLink>
+                    <MudNavLink Href="">Shippment Method Mapping</MudNavLink>
+                    <MudNavLink Href="">Notes Configration</MudNavLink>
+                    <MudNavLink Href="">Tax Method Maping</MudNavLink>
+                    <MudNavLink Href="">AX State</MudNavLink>
+                    <MudNavLink Href="">AX City</MudNavLink>
                 </MudNavGroup>
-                <MudNavLink Href="">Financial Dimensions Group</MudNavLink>
-                <MudNavLink Href="">AX Configration Group</MudNavLink>
-                <MudNavLink Href="">Source Mapping</MudNavLink>
-                <MudNavLink Href="">Affilate Mapping</MudNavLink>
-                <MudNavLink Href="">Payments Method Mapping</MudNavLink>
-                <MudNavLink Href="">State Mapping</MudNavLink>
-                <MudNavLink Href="">Shippment Method Mapping</MudNavLink>
-                <MudNavLink Href="">Notes Configration</MudNavLink>
-                <MudNavLink Href="">Tax Method Maping</MudNavLink>
-                <MudNavLink Href="">AX State</MudNavLink>
-                <MudNavLink Href="">AX City</MudNavLink>
-            </MudNavGroup>
-            <MudNavGroup Title="User Configrations" Expanded="false">
-                <MudNavLink Href="">User Management</MudNavLink>
-                <MudNavLink Href="">Role</MudNavLink>
-                <MudNavLink Href="">Role Menu Mapping</MudNavLink>
-            </MudNavGroup>
+                <MudNavGroup Title="User Configrations" Expanded="false">
+                    <MudNavLink Href="">User Management</MudNavLink>
+                    <MudNavLink Href="">Role</MudNavLink>
+                    <MudNavLink Href="">Role Menu Mapping</MudNavLink>
+                </MudNavGroup>
 
-            <MudNavGroup Title="Monitoring" Expanded="false">
-                <MudNavLink Href="">Run Log</MudNavLink>
-                <MudNavLink Href="">File Log</MudNavLink>
-                <MudNavLink Href="">Order Log</MudNavLink>
-                <MudNavLink Href="">Sales Order</MudNavLink>
-                <MudNavLink Href="">Run Log Update</MudNavLink>
-            </MudNavGroup>
-            <MudNavGroup Title="Report" Expanded="false">
-                <MudNavLink Href="">Order Variations</MudNavLink>
-            </MudNavGroup>
+                <MudNavGroup Title="Monitoring" Expanded="false">
+                    <MudNavLink Href="">Run Log</MudNavLink>
+                    <MudNavLink Href="">File Log</MudNavLink>
+                    <MudNavLink Href="">Order Log</MudNavLink>
+                    <MudNavLink Href="">Sales Order</MudNavLink>
+                    <MudNavLink Href="">Run Log Update</MudNavLink>
+                </MudNavGroup>
+                <MudNavGroup Title="Report" Expanded="false">
+                    <MudNavLink Href="">Order Variations</MudNavLink>
+                </MudNavGroup>
 
-        </MudNavMenu>
-    </MudPaper>
-@*</div>*@
+            </MudNavMenu>
+        </MudPaper>
+    
+</div>
 
-@code {
-    private bool collapseNavMenu = true;
+    @code {
+        private bool collapseNavMenu = true;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+        private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
+        private void ToggleNavMenu()
+        {
+            collapseNavMenu = !collapseNavMenu;
+        }
     }
-}
